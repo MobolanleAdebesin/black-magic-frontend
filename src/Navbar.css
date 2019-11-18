@@ -1,0 +1,52 @@
+*{
+    color: black;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h4{
+    padding: 30px 20px 0 20px;
+}
+h4:hover{
+    border-bottom: 2px solid black;
+}
+
+ul{
+    list-style-type: none;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+li:hover{
+    border-bottom: 2px solid black;
+}
+
+li{
+    list-style-type: none;
+    color: black;
+    padding: 30px 20px 0 20px;
+    text-decoration: none;
+}
+
+h4{
+    color: black;
+}
+
+.Navbar{
+    margin: 30px auto;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
