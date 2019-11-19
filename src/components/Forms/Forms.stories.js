@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import Forms from './Forms';
 
 storiesOf('Forms', module)
-.add('Search', () => <input  placeholder='search' type='search' />)
+.add('Search', () => <input  placeholder='Search...' type='search' />)
 .add('FirstName', () => <input placeholder='First Name' type='firstName' />)
 .add('LastName', () => <input placeholder='Last Name' type='lastName' />)
 .add('UserName', () => <input placeholder='User Name' type='userName'  />)
