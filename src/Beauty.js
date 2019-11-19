@@ -8,13 +8,24 @@ class Beauty extends Component {
             <div className="Beauty">
                 <div className="Sidebar-box">
                     <ul className="Sidebar">
-                        <li className="Sidebar-nav">Hair</li>
-                        <li className="Sidebar-nav">Skincare</li>
-                        <li className="Sidebar-nav">Makeup</li>
-                        <li className="Sidebar-nav">Nails</li>
-                        <li className="Sidebar-nav">Body Art</li>
-                        <li className="Sidebar-nav">Body Care</li>
-                        <li className="Sidebar-nav">Diet and Fitness</li>
+                        <Link to="/Categories/Beauty/Hair">
+                            <li className="Sidebar-nav">Hair</li>
+                        </Link>
+                        <Link to="/Categories/Beauty/Makeup">
+                            <li className="Sidebar-nav">Makeup</li>
+                        </Link>
+                        <Link to="/Categories/Beauty/Nails">
+                            <li className="Sidebar-nav">Nails</li>
+                        </Link>
+                        <Link to="/Categories/Beauty/Body-Art">
+                            <li className="Sidebar-nav">Body Art</li>
+                        </Link>
+                        <Link to="/Categories/Beauty/Body-Care">
+                            <li className="Sidebar-nav">Body Care</li>
+                        </Link>
+                        <Link to="/Categories/Beauty/Diet-and-Fitness">
+                            <li className="Sidebar-nav">Diet and Fitness</li>
+                        </Link>
                     </ul>
                 </div>
                 <div className="Beauty-box">
