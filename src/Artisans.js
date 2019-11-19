@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./Beauty.css"
 
-class Artisans extends Component {
+class Beauty extends Component {
     render() {
         return (
-            <div className="Home">
-                <h1>This is Black Artistry</h1>
+            <div className="Beauty">
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
             </div>
         )
     }
 }
-export default Artisans;
+export default Beauty;
+

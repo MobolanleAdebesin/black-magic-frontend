@@ -6,11 +6,16 @@ class Navbar extends Component {
     render() {
         return (
             <div className="Navbar">
-                <div>
-                    <Link to="/">
-                        <h4>Black Magic</h4>
-                    </Link>
+                <div className="signature-box1">
+                    <div className="signature-box2">
+                        <div className="signature-box">
+                            <Link to="/">
+                                <h4 className="signature">Black Magic</h4>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
+
                 <div className="NavLinks">
                     <ul className="NavBar">
                         <Link to="/">
@@ -26,7 +31,7 @@ class Navbar extends Component {
                 </div>
                 <div>
                     <input type="text" value="" placeholder="Search..." />
-                </div>  
+                </div>
             </div>
         )
     }

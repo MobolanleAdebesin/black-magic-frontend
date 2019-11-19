@@ -1,4 +1,22 @@
+@import url('https://fonts.google.com/?category=Handwriting&selection.family=Damion');
+
 body {
   background: rgb(250, 212, 22);
   text-align: center;
+}
+
+.logo-font{
+  margin-top: 45px;
+  font-family: 'Damion', cursive;
+  font-size: 55px;
+}
+
+.below-text{
+  margin-top: 45px;
+  /* border: 2px solid black; */
+  width: 560px;
+  float: right;
+}
+p{
+  font-family: hk_grotesklight, sans-serif;
 }

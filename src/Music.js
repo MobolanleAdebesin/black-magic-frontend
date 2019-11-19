@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./Beauty.css"
 
-class Music extends Component {
+class Beauty extends Component {
     render() {
         return (
-            <div className="Home">
-                <h1>this is Black Music</h1>
+            <div className="Beauty">
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
+                <div className="beautyCategories"></div>
             </div>
         )
     }
 }
-export default Music;
+export default Beauty;
 
