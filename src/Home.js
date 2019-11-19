@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import image from "./black-pride-woman-african-american-pregnancy-afro-hair-png-transparent-images.jpg"
 import "./Home.css";
 
 
