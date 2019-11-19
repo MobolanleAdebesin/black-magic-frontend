@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path">
+   <circle class="cls-1" cx="50.037" cy="55.782" fill="none" id="svg_1" r="40"/>
+  </clipPath>
+ </defs>
+ <title/>
+ <g class="layer">
+  <title>background</title>
+  <rect fill="none" height="30" id="canvas_background" width="30" x="30" y="40"/>
+ </g>
+ <g class="layer">
+  <title>Layer 1</title>
+  <polygon class="cls-4" clip-path="url(#clip-path)" fill="none" id="svg_4" points="36.295 97.855 60 97.683 60 96.283 36.295 96.283 36.295 97.855" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="cls-4" clip-path="url(#clip-path)" d="m50.10829,29.328412a4.123,3.906354 0 1 0 -8.245,0l0,1.952703a4.123,3.906354 0 0 0 -8.245,0l0,1.953651a4.123,3.906354 0 1 0 -8.245,0l0,5.436493c0,10.061964 4.122,11.825177 4.122,17.577172l0,23.205998l23.705,-0.162962l0,-15.231275a6.278,5.948118 0 0 1 2.451,-4.71548l2.7,-2.0285l0.935,-18.644953l-9.362,-2.523071l0.184,-6.819776z" fill="#191919" id="svg_8" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"/>
+  <line class="cls-4" clip-path="url(#clip-path)" fill="none" id="svg_9" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" x1="41.663" x2="41.663" y1="32.01" y2="34.072"/>
+  <path class="cls-6" clip-path="url(#clip-path)" d="m42.046,36.846c0,-0.084 0,-0.168 -0.008,-0.253l-0.538,-8.693l0,6.85a4.267,4.267 0 0 0 0.546,2.096z" fill="#ff6196" id="svg_15"/>
+  <path class="cls-6" clip-path="url(#clip-path)" d="m49.979,35.64a4.272,4.272 0 0 0 0.093,-0.89l0,-10.65l-0.348,9.936a4.186,4.186 0 0 0 0.255,1.604z" fill="#ff6196" id="svg_17" stroke="null"/>
+  <path class="cls-4" clip-path="url(#clip-path)" d="m29.47071,40.95971a4.122,4.122 0 0 1 -4.47,-3.742l-0.761,-8.569a4.123,4.123 0 0 1 8.213,-0.729l0.761,8.569a4.124,4.124 0 0 1 -3.743,4.471z" fill="#000000" id="svg_18" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="cls-4" clip-path="url(#clip-path)" d="m37.80571,41.157a4.3,4.3 0 0 1 -4.563,-4.031l-0.766,-12.355a4.306,4.306 0 0 1 8.595,-0.533l0.766,12.355a4.306,4.306 0 0 1 -4.032,4.564z" fill="#191919" id="svg_19" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="cls-4" clip-path="url(#clip-path)" d="m45.58571,38.43614a4.287,4.33046 0 0 1 -4.286,-4.33046l0,-11.36403a4.287,4.33046 0 0 1 8.573,0l0,11.36403a4.286,4.32945 0 0 1 -4.287,4.33046z" fill="#000000" id="svg_20" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="cls-4" clip-path="url(#clip-path)" d="m53.37143,38.98488a4.2,4.15638 0 0 1 -4.048,-4.29789l0.386,-10.89962a4.2,4.15638 0 0 1 8.391,0.29095l-0.386,10.89962a4.2,4.15638 0 0 1 -4.343,4.00695l0,-0.00001z" fill="#191919" id="svg_21" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="cls-4" clip-path="url(#clip-path)" d="m52.79971,66.607a6.278,6.278 0 0 1 2.451,-4.977l5.718,-4.4a13.641,13.641 0 0 0 5.477,-10.62l0,-6.967a6.189,6.189 0 0 0 -6.188,-6.189l-8.658,0a4.111,4.111 0 1 0 0,8.221l6.91,0c-7.4,0 -13.952,6.2 -13.952,13.6l0,3.092" fill="#191919" id="svg_25" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"/>
+  <line class="cls-4" clip-path="url(#clip-path)" fill="none" id="svg_26" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" x1="58.699" x2="60.853" y1="41.676" y2="41.676"/>
+ </g>
+</svg>
