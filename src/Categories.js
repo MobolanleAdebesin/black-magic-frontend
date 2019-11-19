@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./Categories.css"
 
 
 class Categories extends Component {
     render() {
         return (
-            <div>
-                <div>
+            <div className="Category-container">
+                <div className="Category-blackshadow-bow">
                     <Link to="/Categories/Beauty">
-                        <button>
-                            Beauty
-                        </button>
+                        <div className="Category-box">
+                            <p className="Category-name">Beauty</p>
+                        </div>
                     </Link>
                 </div>
-                <div>
+                <div className="Category-blackshadow-bow">
                     <Link to="/Categories/Music">
-                        <button>
-                            Music
-                        </button>
+                        <div className="Category-box">
+                            <p className="Category-name">Music</p>
+                        </div>
                     </Link>
                 </div>
-                <div>
+                <div className="Category-blackshadow-bow">
                     <Link to="/Categories/Artisans">
-                        <button>
-                            Artisans
-                        </button>
+                        <div className="Category-box">
+                            <p className="Category-name">Artisans</p>
+                        </div>
                     </Link>
                 </div>
             </div>

@@ -21,12 +21,13 @@
     border: 2px solid black;
     height: 500px;
     width: 310px;
+    background-color: black;
 
 }
 
 img{
-    margin-top: 25px;
-    border: 2px solid black;
+    margin-top: 17px;
+    border: 10px solid rgb(250, 212, 22);
 }
 
 .Profile{

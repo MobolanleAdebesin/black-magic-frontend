@@ -16,6 +16,7 @@ class Home extends Component {
                     <br/>
                     <p>Into a daybreak that’s wondrously clear</p>
                     <p>I rise</p>
+                    <br/>
                     <p>Bringing the gifts that my ancestors gave,</p>
                     <p>I am the dream and the hope of the slave.</p>
                     <p>I rise</p>
