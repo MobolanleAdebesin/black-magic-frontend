@@ -1,0 +1,78 @@
+@import url("https://fonts.google.com/?category=Display,Handwriting&selection.family=Codystar|Over+the+Rainbow");
+
+*{
+    color: black;
+    margin: 0 auto;
+    padding: 0;
+}
+.signature-box1{
+    width: 200px;
+    height: 80px;
+    background-color: black;
+}
+
+.signature-box2{
+    width: 186px;
+    height: 65px;
+    margin: 25px;
+    background-color:rgb(250, 212, 22);
+}
+
+.signature-box{
+    width: 150px;
+    height: 50px;
+    border: 15px solid rgb(250, 212, 22);
+    background-color: black;
+    
+    
+}
+
+.signature{
+    font-family: 'Codystar', cursive;
+    color: rgb(250, 212, 22);
+    padding-top: 15px;
+}
+
+
+ul{
+    list-style-type: none;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+li:hover{
+    border-bottom: 5px solid black;
+}
+
+li{
+    list-style-type: none;
+    color: black;
+    padding: 30px 15px 0 20px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+h4{
+    color: black;
+}
+
+.Navbar{
+    margin: 30px auto;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    font-family: hk_grotesklight, sans-serif;
+
+}
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
