@@ -9,3 +9,15 @@
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
 }
+
+.button-signUp{
+    padding: 5px  15px;
+    font-size: 15px;
+    color: whitesmoke;
+    background: radial-gradient(#000000 0%, #fad416 65%);
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+}
