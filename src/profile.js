@@ -7,8 +7,13 @@ class Profile extends Component {
     return(
      <div className="Container">
        <div className="UserBackground">
-         <div className="UserInfo">
-           
+         <div className="UserProfile">
+           <div className="UserImage">
+           <img src={Tre}alt="" height="100px" width="100px" />
+           <div className="UserInfo">
+             
+           </div>
+           </div>
          </div>
 
        </div>

@@ -3,7 +3,7 @@ import "./Buttons.css";
 
 const Buttons = props => {
   let classList = "";
-  let types = ["link", "signUp", "like", "comment", "reviews"]
+  let types = ["link", "signUp", "like", "comment", "reviews", "about"]
   if(types.includes(props.type)) {
       classList += `button-${props.type}`
   }

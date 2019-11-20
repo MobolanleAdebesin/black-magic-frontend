@@ -62,3 +62,15 @@ svg {
     -ms-border-radius: 15%;
     -o-border-radius: 15%;
 }
+.button-about{
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    background: radial-gradient(#fad416 40%, #000000 79%);
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+}
