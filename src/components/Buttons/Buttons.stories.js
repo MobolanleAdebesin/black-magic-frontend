@@ -11,3 +11,4 @@ storiesOf("Button", module)
   .add ("Comment", () => <Button label="Comment" type="comment" />)
   .add("Reviews", () => <Button label="Reviews" type="reviews" />)
   .add("About", () => <Button label="About" type="about" />)
+

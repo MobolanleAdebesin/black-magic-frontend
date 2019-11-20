@@ -14,3 +14,7 @@
 .UserImage{
     margin-left: -8em;
 }
+.about-button{
+    height: 100vh; 
+    width: 100vw;
+}

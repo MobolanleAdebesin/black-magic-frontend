@@ -8,8 +8,19 @@ const Buttons = props => {
       classList += `button-${props.type}`
   }
 
-  return <button class={classList}>{props.label}
-  <img src={props.icon}/>
-  </button>;
+  return( 
+      <div>
+      <div className="Button">
+  <button class={classList}>{props.label}</button>
+  </div>
+  <div className="Icon Button">
+    <button class={classList}>{props.label}
+   <img src={props.icon}/>
+   </button>
+   </div>
+   </div>
+  )
 };
+
+
 export default Buttons;
