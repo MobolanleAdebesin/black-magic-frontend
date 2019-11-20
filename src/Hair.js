@@ -10,6 +10,8 @@ class Hair extends Component {
             artists: [],
             show: false
         };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
     };
 
     componentDidMount() {
@@ -23,7 +25,31 @@ class Hair extends Component {
             })
     }
 
+    showModal(evt) {
+        this.setState({
+            show: true
+        });
+    }
+
+    hideModal(evt) {
+        this.setState({
+            show: false
+        });
+    }
+
     render() {
+        const Modal = ({ handleClose, show, children }) => {
+            const showHideClassName = show ? "Modal display-block" : "Modal display-none";
+            return (
+                <div className={showHideClassName}>
+                    <span className="close pointer" onClick={handleClose}>&times;</span>
+                    <section className="modal-content">
+                        {children}
+                    </section>
+                </div>
+            )
+        }
+
         return (
             <div>
                 <div className="Beauty">
@@ -53,8 +79,21 @@ class Hair extends Component {
                         {this.state.artists.map((object, index) => {
                             console.log(object)
                             return (
-                                <div className="beautyCategories" key={object._id + 0}>
-                                    <img src={object.image} alt="" key={object._id + 1}/>
+                                <div className="modalcontainer">
+                                    <div className="beautyCategories" key={object._id + 0} >
+                                        <img src={object.image} alt="" key={object._id + 1} onClick={this.showModal} />
+                                    </div>
+                                    <Modal show={this.state.show} handleClose={this.hideModal} key={object._id + 2}>                                        
+                                        <div>
+                                            <div className="slide">
+                                                <img src={object.image} alt="" key={object._id + 1}/>
+                                                <p key={object._id + 3}>{object.name}</p>
+                                                <p key={object._id + 4}>{object.occupation}</p>
+                                                <p key={object._id + 5}>{object.bio}</p>
+                                                <p key={object._id + 6}>{object.location}</p>
+                                            </div>
+                                        </div>
+                                    </Modal>
                                 </div>
                             )
                         })}
@@ -74,80 +113,6 @@ class Hair extends Component {
                     <Link to="/Categories/Beauty/Hair/DeleteProfile">
                         <button>delete hair dresser</button>
                     </Link>
-                </div>
-                <div id="Lightbox" className="modal">
-                    <span className="close pointer" onClick="closeLightbox()">&times;</span>
-                    <div className="modal-content">
-                        <div className="slide">
-                            {/* <img src="./images/mama-africa.jpg" className="image-slide" alt="Toy car on the road." />
-                            <div className="Profilecard"></div>*/}
-                        </div>
-                        <div className="slide">
-                            {/* <img src="./images/central-dogma_med.jpeg" className="image-slide"
-                                alt="Toy car exploring offroad." /> */}
-                        </div>
-                        <div className="slide">
-                            {/* <img src="./images/tableofelements.png" className="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div className="slide">
-                            {/* <img src="./images/konyaks.jpg" className="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div className="slide">
-                            {/* <img src="./images/madam-cj-walker.jpg" className="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div className="slide">
-                            {/* <img src="./images/Judy-Smith.png" className="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div className="slide">
-                            {/* <img src="./images/Olympics.jpg" className="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div className="slide">
-                            {/* <img src="./images/psych.png" className="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <a className="previous" onclick="changeSlide(-1)">&#10094;</a>
-                        <a className="next" onclick="changeSlide(1)">&#10095;</a>
-
-                        <div className="dots">
-                            <div className="col">
-                                {/* <img src="./images/mama-africa.jpg"
-                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div className="col">
-                                {/* <img src="./images/central-dogma_med.jpeg"
-                                    className="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." /> */}
-                            </div>
-                            <div className="col">
-                                {/* <img src="./images/tableofelements.png"
-                                    className="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" /> */}
-                            </div>
-                            <div className="col">
-                                {/* <img src="./images/konyaks.jpg"
-                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div className="col">
-                                {/* <img src="./images/madam-cj-walker.jpg"
-                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div className="col">
-                                {/* <img src="./images/Judy-Smith.png"
-                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div className="col">
-                                {/* <img src="./images/Olympics.jpg"
-                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div className="col">
-                                {/* <img src="./images/psych.png"
-                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         )
