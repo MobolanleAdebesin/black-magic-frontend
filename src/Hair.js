@@ -1,42 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import "./Hair.css"
+import Axios from "axios";
 
 class Hair extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            artists: [],
             show: false
         };
-    };          
-    //   function closeLightbox() {
-    //     document.getElementById('Lightbox').style.display = 'none';
-    //   };
-    
-      
-    //   function showSlide(n) {
-    //     const slides = document.getElementsByClassName('slide');
-    //     let modalPreviews = document.getElementsByClassName('modal-preview');
-      
-    //     if (n > slides.length) {
-    //       slideIndex = 1;	
-    //     };
-        
-    //     if (n < 1) {
-    //       slideIndex = slides.length;
-    //     };
-      
-    //     for (let i = 0; i < slides.length; i++) {
-    //       slides[i].style.display = "none";
-    //     };
-        
-    //     for (let i = 0; i < modalPreviews.length; i++) {
-    //       modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-    //     };
-        
-    //     slides[slideIndex - 1].style.display = 'block';
-    //     modalPreviews[slideIndex - 1].className += ' active';
-    //   };
+    };
+
+    componentDidMount() {
+        Axios.get('http://localhost:4000/artists')
+            .then(res => {
+                this.setState({ artists: res.data })
+                console.log(this.state.artists)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
     render() {
         return (
@@ -65,94 +50,101 @@ class Hair extends Component {
                         </ul>
                     </div>
                     <div className="Beauty-box Beauty-box2">
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
+                        {this.state.artists.map((object, index) => {
+                            console.log(object)
+                            return (
+                                <div className="beautyCategories" key={object._id + 0}>
+                                    <img src={object.image} alt="" key={object._id + 1}/>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
-                <div id="Lightbox" class="modal">
-                    <span class="close pointer" onclick="closeLightbox()">&times;</span>
-                    <div class="modal-content">
-                        <div class="slide">
-                            {/* <img src="./images/mama-africa.jpg" class="image-slide" alt="Toy car on the road." />
-                            <div class="Profilecard"></div>*/}
+                <div>
+                    <Link to="/Categories/Beauty/Hair/AddProfile">
+                        <button>add hair dresser</button>
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/Categories/Beauty/Hair/EditProfile">
+                        <button>edit hair dresser</button>
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/Categories/Beauty/Hair/DeleteProfile">
+                        <button>delete hair dresser</button>
+                    </Link>
+                </div>
+                <div id="Lightbox" className="modal">
+                    <span className="close pointer" onClick="closeLightbox()">&times;</span>
+                    <div className="modal-content">
+                        <div className="slide">
+                            {/* <img src="./images/mama-africa.jpg" className="image-slide" alt="Toy car on the road." />
+                            <div className="Profilecard"></div>*/}
                         </div>
-                        <div class="slide">
-                            {/* <img src="./images/central-dogma_med.jpeg" class="image-slide"
+                        <div className="slide">
+                            {/* <img src="./images/central-dogma_med.jpeg" className="image-slide"
                                 alt="Toy car exploring offroad." /> */}
                         </div>
-                        <div class="slide">
-                            {/* <img src="./images/tableofelements.png" class="image-slide"
+                        <div className="slide">
+                            {/* <img src="./images/tableofelements.png" className="image-slide"
                                 alt="Toy car in the city." /> */}
                         </div>
-                        <div class="slide">
-                            {/* <img src="./images/konyaks.jpg" class="image-slide"
+                        <div className="slide">
+                            {/* <img src="./images/konyaks.jpg" className="image-slide"
                                 alt="Toy car in the city." /> */}
                         </div>
-                        <div class="slide">
-                            {/* <img src="./images/madam-cj-walker.jpg" class="image-slide"
+                        <div className="slide">
+                            {/* <img src="./images/madam-cj-walker.jpg" className="image-slide"
                                 alt="Toy car in the city." /> */}
                         </div>
-                        <div class="slide">
-                            {/* <img src="./images/Judy-Smith.png" class="image-slide"
+                        <div className="slide">
+                            {/* <img src="./images/Judy-Smith.png" className="image-slide"
                                 alt="Toy car in the city." /> */}
                         </div>
-                        <div class="slide">
-                            {/* <img src="./images/Olympics.jpg" class="image-slide"
+                        <div className="slide">
+                            {/* <img src="./images/Olympics.jpg" className="image-slide"
                                 alt="Toy car in the city." /> */}
                         </div>
-                        <div class="slide">
-                            {/* <img src="./images/psych.png" class="image-slide"
+                        <div className="slide">
+                            {/* <img src="./images/psych.png" className="image-slide"
                                 alt="Toy car in the city." /> */}
                         </div>
-                        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-                        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                        <a className="previous" onclick="changeSlide(-1)">&#10094;</a>
+                        <a className="next" onclick="changeSlide(1)">&#10095;</a>
 
-                        <div class="dots">
-                            <div class="col">
+                        <div className="dots">
+                            <div className="col">
                                 {/* <img src="./images/mama-africa.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 {/* <img src="./images/central-dogma_med.jpeg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." /> */}
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 {/* <img src="./images/tableofelements.png"
-                                    class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" /> */}
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 {/* <img src="./images/konyaks.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 {/* <img src="./images/madam-cj-walker.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 {/* <img src="./images/Judy-Smith.png"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 {/* <img src="./images/Olympics.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 {/* <img src="./images/psych.png"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
+                                    className="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
                             </div>
                         </div>
                     </div>
