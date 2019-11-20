@@ -9,6 +9,7 @@ import Categories from "./Categories";
 import Beauty from "./Beauty";
 import Music from "./Music"
 import Artisans from "./Artisans";
+import Profile from "./Profile"
 // import Insurance from "./Searchbyinsurance";
 // import Speciality from "./Searchbyspeciality";
 // import CreateProfile from "./Createprofile";
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path="/Categories/Beauty" exact component ={Beauty}/>
           <Route path="/Categories/Music" component ={Music}/>
           <Route path="/Categories/Artisans" component ={Artisans}/>
+          <Route path="/Profile" component={Profile}/>
           {/* <Route path="/Doctors/searchbyinsurance" component ={Insurance}/>
           <Route path="/Doctors/searchbyspeciality" component ={Speciality}/>
           <Route path="/DoctorEdit/createprofile" component ={CreateProfile}/>

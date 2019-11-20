@@ -1,0 +1,13 @@
+.UserBackground{
+    background: black;
+    width: 90%;
+    height:90%;
+    margin-left: 40em;
+}
+.UserInfo{
+    width: 40%;
+    height:80%;
+    margin-top: 3em;
+    margin-left: 2em;
+    background:#fad416;
+}
