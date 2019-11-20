@@ -1,0 +1,22 @@
+.iconButton-link {
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 100%;
+    background: radial-gradient(#fad416 35%, #000000 75%);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+  }
+
+  .iconButton-like {
+    height: 45px;
+    width: 45px;
+     padding: 5px;
+     background: radial-gradient(#fad416 35%, #000000 75%);
+     border-radius: 100%;
+     -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+     -ms-border-radius: 100%;
+     -o-border-radius: 100%;
+}
