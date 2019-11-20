@@ -1,0 +1,13 @@
+Button{
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+    color: #fad416;
+    background: radial-gradient(#000000 20%, #fad416 70%)
+}
