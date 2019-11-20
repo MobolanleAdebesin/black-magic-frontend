@@ -1,44 +1,55 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import "./Hair.css"
+import Axios from "axios";
 
 class Hair extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            artists: [],
             show: false
         };
-    };          
-    //   function closeLightbox() {
-    //     document.getElementById('Lightbox').style.display = 'none';
-    //   };
-    
-      
-    //   function showSlide(n) {
-    //     const slides = document.getElementsByClassName('slide');
-    //     let modalPreviews = document.getElementsByClassName('modal-preview');
-      
-    //     if (n > slides.length) {
-    //       slideIndex = 1;	
-    //     };
-        
-    //     if (n < 1) {
-    //       slideIndex = slides.length;
-    //     };
-      
-    //     for (let i = 0; i < slides.length; i++) {
-    //       slides[i].style.display = "none";
-    //     };
-        
-    //     for (let i = 0; i < modalPreviews.length; i++) {
-    //       modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-    //     };
-        
-    //     slides[slideIndex - 1].style.display = 'block';
-    //     modalPreviews[slideIndex - 1].className += ' active';
-    //   };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+    };
+
+    componentDidMount() {
+        Axios.get('http://localhost:4000/artists')
+            .then(res => {
+                this.setState({ artists: res.data })
+                console.log(this.state.artists)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    showModal(evt) {
+        this.setState({
+            show: true
+        });
+    }
+
+    hideModal(evt) {
+        this.setState({
+            show: false
+        });
+    }
 
     render() {
+        const Modal = ({ handleClose, show, children }) => {
+            const showHideClassName = show ? "Modal display-block" : "Modal display-none";
+            return (
+                <div className={showHideClassName}>
+                    <span className="close pointer" onClick={handleClose}>&times;</span>
+                    <section className="modal-content">
+                        {children}
+                    </section>
+                </div>
+            )
+        }
+
         return (
             <div>
                 <div className="Beauty">
@@ -65,97 +76,43 @@ class Hair extends Component {
                         </ul>
                     </div>
                     <div className="Beauty-box Beauty-box2">
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
-                        <div className="beautyCategories"></div>
+                        {this.state.artists.map((object, index) => {
+                            console.log(object)
+                            return (
+                                <div className="modalcontainer">
+                                    <div className="beautyCategories" key={object._id + 0} >
+                                        <img src={object.image} alt="" key={object._id + 1} onClick={this.showModal} />
+                                    </div>
+                                    <Modal show={this.state.show} handleClose={this.hideModal} key={object._id + 2}>                                        
+                                        <div>
+                                            <div className="slide">
+                                                <img src={object.image} alt="" key={object._id + 1}/>
+                                                <p key={object._id + 3}>{object.name}</p>
+                                                <p key={object._id + 4}>{object.occupation}</p>
+                                                <p key={object._id + 5}>{object.bio}</p>
+                                                <p key={object._id + 6}>{object.location}</p>
+                                            </div>
+                                        </div>
+                                    </Modal>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
-                <div id="Lightbox" class="modal">
-                    <span class="close pointer" onclick="closeLightbox()">&times;</span>
-                    <div class="modal-content">
-                        <div class="slide">
-                            {/* <img src="./images/mama-africa.jpg" class="image-slide" alt="Toy car on the road." />
-                            <div class="Profilecard"></div>*/}
-                        </div>
-                        <div class="slide">
-                            {/* <img src="./images/central-dogma_med.jpeg" class="image-slide"
-                                alt="Toy car exploring offroad." /> */}
-                        </div>
-                        <div class="slide">
-                            {/* <img src="./images/tableofelements.png" class="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div class="slide">
-                            {/* <img src="./images/konyaks.jpg" class="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div class="slide">
-                            {/* <img src="./images/madam-cj-walker.jpg" class="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div class="slide">
-                            {/* <img src="./images/Judy-Smith.png" class="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div class="slide">
-                            {/* <img src="./images/Olympics.jpg" class="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <div class="slide">
-                            {/* <img src="./images/psych.png" class="image-slide"
-                                alt="Toy car in the city." /> */}
-                        </div>
-                        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-                        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-                        <div class="dots">
-                            <div class="col">
-                                {/* <img src="./images/mama-africa.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div class="col">
-                                {/* <img src="./images/central-dogma_med.jpeg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." /> */}
-                            </div>
-                            <div class="col">
-                                {/* <img src="./images/tableofelements.png"
-                                    class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" /> */}
-                            </div>
-                            <div class="col">
-                                {/* <img src="./images/konyaks.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div class="col">
-                                {/* <img src="./images/madam-cj-walker.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div class="col">
-                                {/* <img src="./images/Judy-Smith.png"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div class="col">
-                                {/* <img src="./images/Olympics.jpg"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                            <div class="col">
-                                {/* <img src="./images/psych.png"
-                                    class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." /> */}
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <Link to="/Categories/Beauty/Hair/AddProfile">
+                        <button>add hair dresser</button>
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/Categories/Beauty/Hair/EditProfile">
+                        <button>edit hair dresser</button>
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/Categories/Beauty/Hair/DeleteProfile">
+                        <button>delete hair dresser</button>
+                    </Link>
                 </div>
             </div>
         )
