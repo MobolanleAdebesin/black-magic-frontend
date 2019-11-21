@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Axios from "axios";
 import Tre from './20190925_152722.jpg'
 import "./Profile.css";
-import Carousel from "./Carousel";
+import Slider from "./Slider/Slider";
 
 
 class Profile extends Component {
