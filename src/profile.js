@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./Profile.css";
-import Carousel from "./Slider/Slider";
+import Slider from "./Slider/Slider";
 
 class Profile extends Component {
   render() {
     return (
       <div className="Container">
-        <Carousel />
+        <Slider />
         <div className="UserBackground">
           <div className="UserProfile">
             <div className="UserImage">
