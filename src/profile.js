@@ -6,7 +6,7 @@ class Profile extends Component {
   render() {
     return (
       <div className="Container">
-        <Carousel />
+       <Carousel />
         <div className="UserBackground">
           <div className="UserProfile">
             <div className="UserImage">
