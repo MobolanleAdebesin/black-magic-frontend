@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom"
+import { Link } from 'react-router-dom';
 import Axios from "axios";
 import "./Navbar.css";
 import Login from "./Login";
@@ -96,7 +96,7 @@ class RegisterLogin extends Component {
             <div className="login-signup-div">
                 <div>
                     <h1>Welcome! we are glad you're here</h1>
-                    <form onSignUp={this.onSignUp}>
+                    <form onSubmit={this.onSignUp}>
                         <div>
                             <h1>Sign Up</h1>
                             <div>
@@ -114,16 +114,12 @@ class RegisterLogin extends Component {
                         </div>
                     </form>
                 </div>
-                <Route path="/user/login" 
-                render={props => {
-                    return (
-                        <Login
-                    username={this.state.username}
-                    password={this.state.password}
-                    isLoggedIn={this.state.isLoggedin}
-                    onLogin={this.onLogin} />
-                    )
-                }}/>                
+                <div>
+                    <Link to="/user/login">
+                        <p>If you already have an account</p>
+                    </Link>
+                </div>
+                
             </div>
         )
     }
