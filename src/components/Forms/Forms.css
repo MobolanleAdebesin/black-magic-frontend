@@ -1,4 +1,11 @@
 input{
+    background: darkgray;
+    border: outset;
     padding: 5px;
     width: 10em;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
 }
