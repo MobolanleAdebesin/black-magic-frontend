@@ -15,7 +15,7 @@ class Beauty extends Component {
     };
 
     componentDidMount() {
-        Axios.get('http://localhost:4000/artists')
+        Axios.get('http://localhost:4000/artists/beauty')
             .then(res => {
                 this.setState({ artists: res.data })
                 console.log(this.state.artists)
@@ -71,8 +71,8 @@ class Beauty extends Component {
                             console.log(object)
                             return (
                                 <div className="modalcontainer">
-                                    <div className="beautyCategories" key={object._id + 0} >
-                                        <img src={object.image} alt="" key={object._id + 1} onClick={this.showModal} />
+                                    <div className="beautyCategories" key={object._id + 0} style={{backgroundImage: 'url{object.image}'}}>
+                                        {/* <img src={object.image} alt="" key={object._id + 1} onClick={this.showModal}/> */}
                                     </div>
                                     <Modal show={this.state.show} handleClose={this.hideModal} key={object._id + 2}>
                                         <div>
