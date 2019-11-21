@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from "./Navbar";
 import Home from "./Home";
 import MeetTheCreators from "./MeetTheCreators";
@@ -10,19 +10,9 @@ import Profile from "./profile"
 import Beauty from "./Beauty";
 import Music from "./Music";
 import Artisans from "./Artisans";
-<<<<<<< HEAD
-import Hair from "./Hair";
-import BodyCare from "./Body-Care";
-import Makeup from "./Makeup";
-import Nails from "./Nails";
-import BodyArt from "./Body-Art"
-import DietandFitness from "./DietandFitness"
-import Profile from "./profile"
-=======
 import AddHairdresserForm from "./AddHairDresser"
 import DeleteProfile from "./DeleteProfile"
 import EditProfile from "./EditProfile"
->>>>>>> master
 
 class App extends Component {
   render() {
@@ -34,11 +24,7 @@ class App extends Component {
           <Route path="/" exact component ={Home}/>
           <Route path="/MeetTheCreators" exact component ={MeetTheCreators}/>
           <Route path="/Categories" exact component ={Categories}/>
-<<<<<<< HEAD
-          <Route path="/Profile" exact component = {Profile} />
-=======
           <Route path="/Profile" exact component ={Profile}/>
->>>>>>> master
           <Route path="/Categories/Beauty" exact component ={Beauty}/>
           <Route path="/Categories/Music" component ={Music}/>
           <Route path="/Categories/Artisans" component ={Artisans}/>

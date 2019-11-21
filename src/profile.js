@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import Axios from "axios";
 import Tre from './20190925_152722.jpg'
->>>>>>> master
 import "./Profile.css";
 import Carousel from "./Carousel";
 
@@ -104,14 +101,6 @@ class Profile extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className="Container">
-        <Carousel />
-        <div className="UserBackground">
-          <div className="UserProfile">
-            <div className="UserImage">
-              <div className="UserInfo"></div>
-=======
       <div className="Profile-Container">
         <div className="Profiile-box" id="Profile-box-picture">
           <img src={Tre} alt="" height="400px" width="250px" />
@@ -130,7 +119,7 @@ class Profile extends Component {
             )
           })}
           <div>
-            <Link to="/Proile/AddProfile">
+            <Link to="/Profile/AddProfile">
               <button>add hair dresser</button>
             </Link>
           </div>
@@ -178,16 +167,11 @@ class Profile extends Component {
                   <input type="submit" placeholder="Create New Profile" />
                 </div>
               </form>
->>>>>>> master
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    );
-=======
     )
->>>>>>> master
   }
 }
 export default Profile;
