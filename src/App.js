@@ -6,7 +6,10 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import MeetTheCreators from "./MeetTheCreators";
 import Categories from "./Categories";
-import Profile from "./profile"
+import Profile from "./profile";
+import RegisterLogin from "./Register";
+// import Login from "./Login";
+import SignUp from "./SignUp";
 import Beauty from "./Beauty";
 import Music from "./Music";
 import Artisans from "./Artisans";
@@ -25,6 +28,9 @@ class App extends Component {
           <Route path="/MeetTheCreators" exact component ={MeetTheCreators}/>
           <Route path="/Categories" exact component ={Categories}/>
           <Route path="/Profile" exact component ={Profile}/>
+          <Route path="/RegisterLogin" exact component = {RegisterLogin}/>
+          {/* <Route path="/user/login" exact component ={Login}/> */}
+          <Route path="/user/signup" exact component ={SignUp}/>
           <Route path="/Categories/Beauty" exact component ={Beauty}/>
           <Route path="/Categories/Music" component ={Music}/>
           <Route path="/Categories/Artisans" component ={Artisans}/>
