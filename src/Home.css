@@ -1,0 +1,15 @@
+h1 { background: gradient(linear, left top, right top, from(#222), to (#222), color-stop(0.5, #fff)); 
+    animation-name: shimmer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes shimmer{
+    0%{
+    background-position: top left;
+    }
+    100%{
+        background-position:top right;
+    }
+}

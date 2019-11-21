@@ -8,7 +8,9 @@ class Hair extends Component {
         this.state = {
             show: false
         };
-    };          
+    };   
+ 
+
     //   function closeLightbox() {
     //     document.getElementById('Lightbox').style.display = 'none';
     //   };

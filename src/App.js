@@ -15,6 +15,7 @@ import Makeup from "./Makeup";
 import Nails from "./Nails";
 import BodyArt from "./Body-Art"
 import DietandFitness from "./DietandFitness"
+import Profile from "./profile"
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path="/" exact component ={Home}/>
           <Route path="/MeetTheCreators" exact component ={MeetTheCreators}/>
           <Route path="/Categories" exact component ={Categories}/>
+          <Route path="/Profile" exact component = {Profile} />
           <Route path="/Categories/Beauty" exact component ={Beauty}/>
           <Route path="/Categories/Music" component ={Music}/>
           <Route path="/Categories/Artisans" component ={Artisans}/>
