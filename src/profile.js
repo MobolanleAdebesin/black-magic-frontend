@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Profile.css";
-import Carousel from "./Carousel";
+import Carousel from "./Slider";
 
 class Profile extends Component {
   render() {
