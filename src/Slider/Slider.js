@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Slide from './Slide';
+import SlideRightArrow from './SlideRightArrow';
+import SlideLeftArrow from './SlideLeftArrow';
 
 export default class Slider extends Component {
     constructor(props) {
