@@ -46,7 +46,7 @@ onChangeimage(evt) {
     });
 }
 
-onSubmit(evt) {
+    onSubmit(evt) {
     evt.preventDefault();
     const Profile = {
         name: this.state.name,
