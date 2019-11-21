@@ -10,10 +10,21 @@ export default class Slider extends Component {
         this.state = {}
     }
 
+    goToPrevSlide = () => {
+
+    }
+
+    goToNextSlide = () => {
+        
+    }
+
     render() {
         return(
             <div className="slider">
+                <Slide />
 
+                <SlideLeftArrow />
+                <SlideRightArrow />
             </div>
         );
     }
