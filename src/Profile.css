@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .UserBackground{
     background: black;
     width: 90%;
@@ -15,6 +16,51 @@
     margin-left: -8em;
 }
 .about-button{
+=======
+
+/* .about-button{
+>>>>>>> master
     height: 100vh; 
     width: 100vw;
+} */
+
+.Profile-Container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 5px;
+    grid-template-rows: auto;
+    width: 85%;
+    height: 1250px;
+    margin-top: 35px;
+    /* border: 2px solid black; */
+}
+
+.Profiile-box{
+    width: 100%;    
+}
+
+#Profile-box-picture{
+    height: 35%;
+    margin-top: 35px;
+}
+img{
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+
+#Profile-info-box{
+    border: 2px solid black;
+}
+
+
+#Profile-box-review{
+    margin-top: 35px;
+    border: 2px solid black;
+}
+.Reviewlinkbox{
+    padding-top: 155px;
+}
+.Reviewlink{
+    padding: 15px;
 }

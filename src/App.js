@@ -6,9 +6,11 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import MeetTheCreators from "./MeetTheCreators";
 import Categories from "./Categories";
+import Profile from "./profile"
 import Beauty from "./Beauty";
-import Music from "./Music"
+import Music from "./Music";
 import Artisans from "./Artisans";
+<<<<<<< HEAD
 import Hair from "./Hair";
 import BodyCare from "./Body-Care";
 import Makeup from "./Makeup";
@@ -16,6 +18,11 @@ import Nails from "./Nails";
 import BodyArt from "./Body-Art"
 import DietandFitness from "./DietandFitness"
 import Profile from "./profile"
+=======
+import AddHairdresserForm from "./AddHairDresser"
+import DeleteProfile from "./DeleteProfile"
+import EditProfile from "./EditProfile"
+>>>>>>> master
 
 class App extends Component {
   render() {
@@ -27,16 +34,17 @@ class App extends Component {
           <Route path="/" exact component ={Home}/>
           <Route path="/MeetTheCreators" exact component ={MeetTheCreators}/>
           <Route path="/Categories" exact component ={Categories}/>
+<<<<<<< HEAD
           <Route path="/Profile" exact component = {Profile} />
+=======
+          <Route path="/Profile" exact component ={Profile}/>
+>>>>>>> master
           <Route path="/Categories/Beauty" exact component ={Beauty}/>
           <Route path="/Categories/Music" component ={Music}/>
           <Route path="/Categories/Artisans" component ={Artisans}/>
-          <Route path="/Categories/Beauty/Hair" component ={Hair}/>
-          <Route path="/Categories/Beauty/Makeup" component ={Makeup}/>
-          <Route path="/Categories/Beauty/Nails" component ={Nails}/>
-          <Route path="/Categories/Beauty/Body-Art" component ={BodyArt}/>
-          <Route path="/Categories/Beauty/Body-Care" component ={BodyCare}/>
-          <Route path="/Categories/Beauty/Diet-and-Fitness" component ={DietandFitness}/>
+          <Route path="/Proile/AddProfile" component ={AddHairdresserForm}/>
+          <Route path="/Profile/DeleteProfile" component ={DeleteProfile}/>
+          <Route path="/Profile/EditProfile" component ={EditProfile}/>
           {/* <Route path="/DoctorEdit/deleteprofile" component ={DeleteProfile}/> */}
         </Router>
       </div>
