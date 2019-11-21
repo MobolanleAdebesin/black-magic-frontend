@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Axios from "axios";
+import "./Beauty.css"
 
 class Music extends Component {
     constructor(props) {
@@ -67,11 +68,15 @@ class Music extends Component {
                     </div>
                     <div className="Beauty-box Beauty-box2">
                         {this.state.artists.map((object, index) => {
+                            // const  = {
+                            //     fontSize: '15px',
+                            //     textAlign: 'center'
+                            //   };
                             console.log(object)
                             return (
-                                <div className="modalcontainer">
-                                    <div className="beautyCategories" key={object._id + 0} >
-                                        <img src={object.image} alt="" key={object._id + 1} onClick={this.showModal} style={{backgroundImage: 'url{object.image}'}}/>
+                                <div className="beautyCategories" Style={{backgroundImage: 'url{object.image}'}}>
+                                    <div key={object._id + 0} >
+                                        <img src={object.image} alt="" key={object._id + 1} onClick={this.showModal} width="150px" height="200px"/>
                                     </div>
                                     <Modal show={this.state.show} handleClose={this.hideModal} key={object._id + 2}>
                                         <div>
