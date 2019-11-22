@@ -1,6 +1,6 @@
 # Black Magic
 
-![image]()
+![image](https://i.imgur.com/PXzxIHf.png)
 
 ## Purpose
 The purpose of this project was to create an app/website using a MERN stack collaboratively with a team.
@@ -27,6 +27,9 @@ The deployed website can be found [here](http://test.com)
 
 * Ability to search by tags
 * Slider for select images on user's profile page
+* Encryption
+* Like Button
+* Review field
 
 
 ## Authors
