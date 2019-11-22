@@ -53,7 +53,7 @@ class Profile extends Component {
 
         Axios({
             method: "post",
-            url: 'http://localhost:4000/reviews/add',
+            url: 'https://black-magic-api.herokuapp.com/reviews/add',
             data: {
                 username: this.state.username,
                 text: this.state.text,
@@ -77,9 +77,9 @@ class Profile extends Component {
 
     onDelete(evt) {
         evt.preventDefault();
-        if (this.props.artistId) {
-            console.log(this.props.artistId)
-            const Url = (`http://localhost:4000/artists/remove/${this.props.artistId}`);
+        if (this.props.artistName) {
+            console.log(this.props.artistName)
+            const Url = (`https://black-magic-api.herokuapp.com/artists/remove/${this.props.artistName}`);
             console.log(Url)
 
             Axios.delete(Url)
