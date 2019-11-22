@@ -3,7 +3,7 @@ Button{
     padding: 5px 15px;
     font-weight: bolder;
     font-size: 19px;
-    border: none;
+    border: solid black .5px;
     border-radius: 15%;
     -webkit-border-radius: 15%;
     -moz-border-radius: 15%;
