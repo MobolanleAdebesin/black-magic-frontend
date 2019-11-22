@@ -14,7 +14,7 @@ class Artisans extends Component {
     };
 
     componentDidMount() {
-        Axios.get('http://localhost:4000/artists/artist')
+        Axios.get('https://black-magic-api.herokuapp.com/artists/occupation/artist')
             .then(res => {
                 this.setState({ artists: res.data })
                 console.log(this.state.artists)

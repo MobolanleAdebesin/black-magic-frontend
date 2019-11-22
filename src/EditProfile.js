@@ -60,7 +60,7 @@ class EditProfile extends Component {
 
     onFindProfile(evt) {
         evt.preventDefault();
-        Axios.get(`http://localhost:4000/artists/name/${this.state.searchName}`)
+        Axios.get(`https://black-magic-api.herokuapp.com/artists/name/${this.state.searchName}`)
             .then(res => {
                 this.setState({
                     resultArtist: res.data,
@@ -88,7 +88,7 @@ class EditProfile extends Component {
         }
         console.log(Profile);
 
-        const Url = (`http://localhost:4000/artists/update/${this.state.name}`);
+        const Url = (`https://black-magic-api.herokuapp.com/artists/update/${this.state.name}`);
 
         Axios.put(Url, Profile)
             .then(res => console.log(res.data))
