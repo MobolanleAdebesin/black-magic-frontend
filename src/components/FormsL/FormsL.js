@@ -3,7 +3,7 @@ import "./FormsL.css";
 
 const FormsL = props => {
   let classList = "";
-  let types = ["firstName", "search", "lastName", "password"];
+  let types = ["firstName", "search", "lastName", "password", "occupation", "location"];
   if (types.includes(props.type)) {
     classList += `formL-${props.type}`;
   }

@@ -8,4 +8,5 @@ storiesOf('FormsL', module)
 .add('UserName', () => <input placeholder='User Name' type='userName'  />)
 .add('Password', () => <input placeholder='Password'  type='password' />)
 .add('Location', () => <input placeholder='Location' type ='location' />)
+.add('Occupation', () => <input placeholder='Occupation' type='occupation' />)
 
