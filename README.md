@@ -20,7 +20,7 @@ Black Magic is a social networking platform to connect artists of various forms 
 
 ## Deployed Site
 
-The deployed website can be found [here](http://test.com)
+The deployed website can be found [here](https://wizardly-davinci-09fb11.netlify.com/)
 
 
 ## Roadmap
