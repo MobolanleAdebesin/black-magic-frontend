@@ -10,6 +10,8 @@
   -webkit-animation: shine 3s linear infinite;
 }
 
+
+
 @keyframes shine {
   0% {
     background-position: -500%;

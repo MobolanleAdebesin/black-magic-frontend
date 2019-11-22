@@ -44,3 +44,6 @@ img{
 .Reviewlink{
     padding: 15px;
 }
+button:hover {
+    cursor: pointer;
+}
