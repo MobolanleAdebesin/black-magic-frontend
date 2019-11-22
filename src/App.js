@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import "bootstrap/dist/css/bootstrap.min.css"
@@ -13,9 +13,10 @@ import SignUp from "./SignUp";
 import Beauty from "./Beauty";
 import Music from "./Music";
 import Artisans from "./Artisans";
-import AddHairdresserForm from "./AddHairDresser"
-import DeleteProfile from "./DeleteProfile"
-import EditProfile from "./EditProfile"
+import AddHairdresserForm from "./AddHairDresser";
+import DeleteProfile from "./DeleteProfile";
+import EditProfile from "./EditProfile";
+import Axios from "axios";
 
 class App extends Component {
   render() {
