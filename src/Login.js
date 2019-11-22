@@ -65,17 +65,17 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome! we are glad you're here</h1>
+               
                 <form onSubmit={this.onSubmit}>
-                    <div>
-                        <h1>To Login</h1>
-                        <div>
+                    <div className="signup">
+                        <h1>Login! We are glad you are here</h1>
+                        <div className="inputtext">
                             <input type="text" value={this.state.username} placeholder="Username" onChange={this.onChangeusername} />
                         </div>
-                        <div>
+                        <div className="inputtext">
                             <input type="text" value={this.state.password} placeholder="Password" onChange={this.onChangepassword} />
                         </div>
-                        <div>
+                        <div className="inputtext">
                             <input type="submit" placeholder="Create New Profile" />
                         </div>
                     </div>

@@ -29,9 +29,9 @@ img{
     margin-bottom: 30px;
 }
 
-#Profile-info-box{
+/* #Profile-info-box{
     border: 2px solid black;
-}
+} */
 
 
 #Profile-box-review{
@@ -43,4 +43,16 @@ img{
 }
 .Reviewlink{
     padding: 15px;
+}
+.editanddelete{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+.BioPtag{
+    font-family: 'Baskervville', serif;
+    font-size: 20px;
 }

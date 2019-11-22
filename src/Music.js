@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Axios from "axios";
-import "./Beauty.css"
+import "./Beauty.css";
+
 
 class Music extends Component {
     constructor(props) {
@@ -68,32 +69,18 @@ class Music extends Component {
                     </div>
                     <div className="Beauty-box Beauty-box2">
                         {this.state.artists.map((object, index) => {
-                            // const  = {
-                            //     fontSize: '15px',
-                            //     textAlign: 'center'
-                            //   };
                             console.log(object)
                             return (
                                 <div className="beautyCategories" Style={{backgroundImage: 'url{object.image}'}}>
                                     <div key={object._id + 0} >
-                                        <img src={object.image} alt="" key={object._id + 1} onClick={this.showModal} width="150px" height="200px"/>
+                                        <img className="artistimg" src={object.image} alt="" key={object._id + 1} onClick={this.showModal} width="150px" height="200px"/>
+                                        <div className="artistname"><p className="artistname" key={object._id + 3}>{object.name}</p></div>
                                     </div>
-                                    <Modal show={this.state.show} handleClose={this.hideModal} key={object._id + 2}>
-                                        <div>
-                                            <div className="slide">
-                                                <img src={object.image} alt="" key={object._id + 1} />
-                                                <p key={object._id + 3}>{object.name}</p>
-                                                <p key={object._id + 4}>{object.occupation}</p>
-                                                <p key={object._id + 5}>{object.bio}</p>
-                                                <p key={object._id + 6}>{object.location}</p>
-                                            </div>
-                                        </div>
-                                    </Modal>
                                 </div>
                             )
                         })}
                     </div>
-                </div>
+                </div> 
             </div>
         )
     }

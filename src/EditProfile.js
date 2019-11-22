@@ -1,23 +1,34 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Axios from "axios";
+import "./EditProfile.css";
 
 class EditProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            searchName: "",
+            resultArtist: [],
             name: "",
             occupation: "",
             bio: "",
             location: "",
             image: ""
         }
+        this.onSearchName = this.onSearchName.bind(this);
+        this.onFindProfile = this.onFindProfile.bind(this);
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangeoccupation = this.onChangeoccupation.bind(this);
         this.onChangebio = this.onChangebio.bind(this);
         this.onChangelocation = this.onChangelocation.bind(this);
         this.onChangeimage = this.onChangeimage.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onSearchName(evt) {
+        this.setState({
+            searchName: evt.target.value
+        });
     }
 
     onChangeName(evt) {
@@ -45,6 +56,26 @@ class EditProfile extends Component {
             image: evt.target.value
         });
     }
+
+    onFindProfile(evt) {
+        evt.preventDefault();
+        Axios.get(`http://localhost:4000/artists/${this.state.searchName}`)
+            .then(res => {
+                this.setState({
+                    resultArtist: res.data,
+                    name: res.data.name,
+                    occupation: res.data.occupation,
+                    location: res.data.location,
+                    bio: res.data.bio,
+                    image: res.data.image
+                })
+                console.log(this.state)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     onSubmit(evt) {
         evt.preventDefault();
         const Profile = {
@@ -54,13 +85,13 @@ class EditProfile extends Component {
             bio: this.state.bio,
             image: this.state.image
         }
-        console.log(Profile); 
+        console.log(Profile);
 
         const Url = (`http://localhost:4000/artists/update/${this.state.name}`);
 
         Axios.post(Url, Profile)
-        .then(res => console.log(res.data))
-        .catch(err => console.log(err));
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err));
 
         this.setState({
             name: "",
@@ -76,31 +107,48 @@ class EditProfile extends Component {
     render() {
         return (
             <div className="AddHairdresserForm">
-                <h1>Welcome! we are glad you're here</h1>
-                <form onSubmit={this.onSubmit}>
+                <div className="topform">
+                    <h1>Find your name to Edit your Profile!</h1>
                     <div>
-                        <h1>Sign Up</h1>
-                        <div>
-                            <input type="text" value={this.state.name} placeholder="Name" onChange={this.onChangeName} />
-                        </div>
-                        <div>
-                            <input type="text" value={this.state.occupation} placeholder="occupation" onChange={this.onChangeoccupation} />
-                        </div>
-                        <div>
-                            <input type="text" value={this.state.location} placeholder="location" onChange={this.onChangelocation} />
-                        </div>
-                        <div>
-                            <input type="text" value={this.state.bio} placeholder="bio" onChange={this.onChangebio} />
-                        </div>
-                        <div>
-                            <input type="text" value={this.state.image} placeholder="image_url" onChange={this.onChangeimage} />
-                        </div>
-                        <div>
-                            <input type="submit" placeholder="Create New Profile" />
+                        <input className="topforminput" type="text" value={this.state.searchName} placeholder="Name" onChange={this.onSearchName} />
+                        <div className="Button-div" onClick={this.onFindProfile}>
+                            <p className="Button-div-ptag">Find Artist Profile</p>
                         </div>
                     </div>
-                </form>
+                </div>
+
+                <div>
+                    {this.state.resultArtist.map((artist, index) => {
+                        console.log(artist)
+                        return (
+                            <form onSubmit={this.onSubmit}>
+                                <div>
+
+                                    <div>
+                                        <input type="text" value={this.state.name} placeholder="Name" onChange={this.onChangeName} />
+                                    </div>
+                                    <div>
+                                        <input type="text" value={this.state.occupation} placeholder="occupation" onChange={this.onChangeoccupation} />
+                                    </div>
+                                    <div>
+                                        <input type="text" value={this.state.location} placeholder="location" onChange={this.onChangelocation} />
+                                    </div>
+                                    <div>
+                                        <input type="text" value={this.state.bio} placeholder="bio" onChange={this.onChangebio} />
+                                    </div>
+                                    <div>
+                                        <input type="text" value={this.state.image} placeholder="image_url" onChange={this.onChangeimage} />
+                                    </div>
+                                    <div>
+                                        <input type="submit" placeholder="Create New Profile" />
+                                    </div>
+                                </div>
+                            </form>
+                        )
+                    })};
+                </div>
             </div>
+
         )
     }
 }
