@@ -22,7 +22,7 @@ class DeleteProfile extends Component {
     onSubmit(evt) {
         evt.preventDefault();
         if (this.state.id){
-            const Url = (`http://localhost:4000/artists/remove/${this.state.id}`);
+            const Url = (`https://black-magic-api.herokuapp.com/artists/remove/${this.state.id}`);
 
             Axios.delete(Url)
             .then(res => console.log(res))

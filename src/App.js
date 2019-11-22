@@ -6,8 +6,13 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import MeetTheCreators from "./MeetTheCreators";
 import Categories from "./Categories";
+<<<<<<< HEAD
 import Profile from "./profile";
 // import RegisterLogin from "./Register";
+=======
+import Profiles from "./Profiles";
+import RegisterLogin from "./Register";
+>>>>>>> 252437a61080cbd391746843ceb86cf4ef3543dd
 import Login from "./Login";
 import SignUp from "./SignUp";
 import Beauty from "./Beauty";
@@ -112,6 +117,7 @@ class App extends Component {
     });
   }
   render() {
+<<<<<<< HEAD
     if (this.state.page === "") {
       return (
         <div className="App">
@@ -164,5 +170,32 @@ class App extends Component {
     }
   }
 }
+=======
+    return (
+      <div className="App">
+        <Router>
+          <Navbar />
+          <br />
+          <Route path="/" exact component ={Home}/>
+          <Route path="/MeetTheCreators" exact component ={MeetTheCreators}/>
+          <Route path="/Categories" exact component ={Categories}/>
+          <Route path="/Profile" exact component ={Profiles}/>
+          <Route path="/RegisterLogin" exact component = {RegisterLogin}/>
+          <Route path="/user/login" exact component ={Login}/>
+          <Route path="/user/signup" exact component ={SignUp}/>
+          <Route path="/Categories/Beauty" exact component ={Beauty}/>
+          <Route path="/Categories/Music" component ={Music}/>
+          <Route path="/Categories/Artisans" component ={Artisans}/>
+          <Route path="/Profile/AddProfile" component ={AddHairdresserForm}/>
+          <Route path="/Profile/DeleteProfile" component ={DeleteProfile}/>
+          <Route path="/Profile/EditProfile" component ={EditProfile}/>
+          {/* <Route path="/DoctorEdit/deleteprofile" component ={DeleteProfile}/> */}
+        </Router>
+      </div>
+    );
+  };
+
+};
+>>>>>>> 252437a61080cbd391746843ceb86cf4ef3543dd
 
 export default App;
