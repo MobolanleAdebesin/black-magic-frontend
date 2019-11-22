@@ -57,7 +57,7 @@ onChangeimage(evt) {
     }
     console.log(Profile); 
 
-    Axios.post('http://localhost:4000/artists/add', Profile)
+    Axios.post('https://black-magic-api.herokuapp.com', Profile)
     .then(res => console.log (res.data))
     .catch(err => console.log(err))
 
