@@ -3,11 +3,11 @@ import "./Forms.css";
 
 const Forms = props => {
   let classList = "";
-  let types = ["search", "firstName", "search", "lastName", "password"];
+  let types = ["search"];
   if (types.includes(props.type)) {
-    classList += `forms-${props.type}`;
+    classList += `form-${props.type}`;
   }
 
-  return <form class={classList}>{props.label}</form>;
+  return <input class={classList}>{props.label}</input>;
 };
 export default Forms;

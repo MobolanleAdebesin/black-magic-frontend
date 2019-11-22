@@ -1,23 +1,11 @@
 input{
     background: #fad416;
     border-bottom: solid black 1px;
-    padding: 10px;
+    padding: 20px;
     width: 30em;
     border-radius: 10%;
     -webkit-border-radius: 10%;
     -moz-border-radius: 10%;
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
-}
-/* .form-firstName{
-    height: 140px;
-}
-.firstName{
-    height: 140px;
-    padding: 20px;
-} */
-
-.search-input{
-    height: 3em;
-    width: 30em;
 }
