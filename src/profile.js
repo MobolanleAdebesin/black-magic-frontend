@@ -79,7 +79,11 @@ class Profile extends Component {
         evt.preventDefault();
         if (this.props.artistName) {
             console.log(this.props.artistName)
+<<<<<<< HEAD
             const Url = (`https://black-magic-api.herokuapp.com/artists/remove/${this.props.artistName}`);
+=======
+            const Url = (`http://localhost:4000/artists/remove/${this.props.artistName}`);
+>>>>>>> cenwachukwu
             console.log(Url)
 
             Axios.delete(Url)
