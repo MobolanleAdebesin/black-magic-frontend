@@ -17,7 +17,7 @@ class Profiles extends Component {
   };
 
   componentDidMount() {
-    Axios.get('http://localhost:4000/reviews')
+    Axios.get('https://black-magic-api.herokuapp.com/reviews')
       .then(res => {
         this.setState({ reviews: res.data })
         console.log(this.state.reviews)
@@ -25,7 +25,7 @@ class Profiles extends Component {
       .catch(err => {
         console.log(err)
       })
-    Axios.get('http://localhost:4000/artists')
+    Axios.get('https://black-magic-api.herokuapp.com/artists')
       .then(res => {
         this.setState({ artists: res.data })
         console.log(this.state.artists)

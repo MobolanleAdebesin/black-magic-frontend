@@ -55,7 +55,7 @@ class SignUp extends Component {
         }
         console.log(User);
 
-        Axios.post('http://localhost:4000/users/add', User)
+        Axios.post('https://black-magic-api.herokuapp.com/users/add', User)
         .then(response => {
             localStorage.token = response.data.token
             console.log(response.data.token)
