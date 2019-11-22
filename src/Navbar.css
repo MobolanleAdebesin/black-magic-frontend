@@ -28,9 +28,10 @@
 }
 
 .signature{
-    font-family: 'Codystar', cursive;
+    font-family: 'Homemade Apple', cursive;
     color: rgb(250, 212, 22);
     padding-top: 15px;
+    text-transform: capitalize;
 }
 
 

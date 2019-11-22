@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom"
+import { Link } from 'react-router-dom';
 import Axios from "axios";
 import "./Navbar.css";
 import Login from "./Login";
+import "./Register.css";
 
 
 class RegisterLogin extends Component {
@@ -94,36 +95,32 @@ class RegisterLogin extends Component {
 
         return (
             <div className="login-signup-div">
-                <div>
-                    <h1>Welcome! we are glad you're here</h1>
-                    <form onSignUp={this.onSignUp}>
-                        <div>
-                            <h1>Sign Up</h1>
-                            <div>
+                <div className="RegisterDiv">
+                    
+                    <form onSubmit={this.onSignUp}>
+                        <div className="signup">
+                            <h1>Sign Up! We are glad you are here</h1>
+                            <div className="inputtext">
                                 <input type="text" value={this.state.username} placeholder="Username" onChange={this.onChangeusername} />
                             </div>
-                            <div>
+                            <div className="inputtext">
                                 <input type="text" value={this.state.password} placeholder="Password" onChange={this.onChangepassword} />
                             </div>
-                            <div>
+                            <div className="inputtext">
                                 <input type="text" value={this.state.passwordconfirm} placeholder="Password Confirmation" onChange={this.onChangepasswordconfirm} />
                             </div>
-                            <div>
+                            <div className="inputtext">
                                 <input type="submit" placeholder="Create New Profile" />
                             </div>
                         </div>
                     </form>
                 </div>
-                <Route path="/user/login" 
-                render={props => {
-                    return (
-                        <Login
-                    username={this.state.username}
-                    password={this.state.password}
-                    isLoggedIn={this.state.isLoggedin}
-                    onLogin={this.onLogin} />
-                    )
-                }}/>                
+                <div >
+                    <Link to="/user/login">
+                        <p className="Signinlink">Got an account? Click here</p>
+                    </Link>
+                </div>
+                
             </div>
         )
     }

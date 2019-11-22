@@ -1,0 +1,24 @@
+.login-signup-div{
+    padding: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.signup{
+    padding: 45px;
+}
+
+.Signinlink{
+    font-size: 15px;
+}
+
+.Signinlink:hover{
+    font-size: 35px;
+    color: red;
+}
+
+.inputtext{
+    margin: 25px;
+}

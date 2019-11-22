@@ -12,9 +12,7 @@ class Navbar extends Component {
             password: "",
             isLoggedin: false
         }
-        this.onChangeusername = this.onChangeusername.bind(this);
-        this.onChangepassword = this.onChangepassword.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+        this.handleLogOut = this.handleLogOut.bind(this);
     }
 
     componentDidMount() {
@@ -29,39 +27,13 @@ class Navbar extends Component {
         }
     }
 
-    onChangeusername(evt) {
-        this.setState({
-            username: evt.target.value
-        });
-    }
-    onChangepassword(evt) {
-        this.setState({
-            password: evt.target.value
-        });
-    }
-
-    onSubmit(evt) {
-        evt.preventDefault();
-        const User = {
-            username: this.state.username,
-            password: this.state.password,
-            isLoggedin: true
-        }
-        console.log(User);
-
-        Axios.post('http://localhost:4000/users/login', User)
-        .then(response => {
-            localStorage.token = response.data.token
-            console.log(response.data.token)
-            this.setState({isLoggedIn: true})
-        })
-        .catch(err => console.log(err))
-
+    handleLogOut() {
         this.setState({
             username: "",
-            password: "",
-            isLoggedin: false
+          password: ''
         })
+        localStorage.clear()
+        console.log(this.state)
     }
 
     render() {
@@ -94,6 +66,7 @@ class Navbar extends Component {
                         <Link to="/RegisterLogin">
                             <li>Register/Login</li>
                         </Link>
+                        <li onClick={this.handleLogOut}>Log Out</li>
                     </ul>
                 </div>
             </div>
