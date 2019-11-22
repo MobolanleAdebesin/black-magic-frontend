@@ -17,6 +17,7 @@ class Music extends Component {
 
     componentDidMount() {
         Axios.get('https://black-magic-api.herokuapp.com/artists/occupation/musician')
+
             .then(res => {
                 this.setState({ artists: res.data })
                 console.log(this.state.artists)

@@ -69,7 +69,7 @@ class Artisans extends Component {
                         {this.state.artists.map((object, index) => {
                             console.log(object)
                             return (
-                                <div className="beautyCategories" Style={{backgroundImage: 'url{object.image}'}}>
+                                <div className="beautyCategories">
                                     <div key={object._id + 0} >
                                         <img className="artistimg" src={object.image} alt="" key={object._id + 1} onClick={this.showModal} width="150px" height="200px"/>
                                         <div className="artistname"><p className="artistname" key={object._id + 3}>{object.name}</p></div>
