@@ -50,6 +50,7 @@ class EditProfile extends Component {
         this.setState({
             bio: evt.target.value
         });
+        console.log(this.state.bio)
     }
     onChangeimage(evt) {
         this.setState({
@@ -59,15 +60,15 @@ class EditProfile extends Component {
 
     onFindProfile(evt) {
         evt.preventDefault();
-        Axios.get(`http://localhost:4000/artists/${this.state.searchName}`)
+        Axios.get(`http://localhost:4000/artists/name/${this.state.searchName}`)
             .then(res => {
                 this.setState({
                     resultArtist: res.data,
-                    name: res.data.name,
-                    occupation: res.data.occupation,
-                    location: res.data.location,
-                    bio: res.data.bio,
-                    image: res.data.image
+                    name: res.data[0].name,
+                    occupation: res.data[0].occupation,
+                    location: res.data[0].location,
+                    bio: res.data[0].bio,
+                    image: res.data[0].image
                 })
                 console.log(this.state)
             })
@@ -89,7 +90,7 @@ class EditProfile extends Component {
 
         const Url = (`http://localhost:4000/artists/update/${this.state.name}`);
 
-        Axios.post(Url, Profile)
+        Axios.put(Url, Profile)
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
 
@@ -117,13 +118,12 @@ class EditProfile extends Component {
                     </div>
                 </div>
 
-                <div>
+                <form onSubmit={this.onSubmit}>
                     {this.state.resultArtist.map((artist, index) => {
                         console.log(artist)
                         return (
-                            <form onSubmit={this.onSubmit}>
+                            
                                 <div>
-
                                     <div>
                                         <input type="text" value={this.state.name} placeholder="Name" onChange={this.onChangeName} />
                                     </div>
@@ -143,10 +143,9 @@ class EditProfile extends Component {
                                         <input type="submit" placeholder="Create New Profile" />
                                     </div>
                                 </div>
-                            </form>
-                        )
-                    })};
-                </div>
+                            
+                        )})};
+                </form>
             </div>
 
         )
