@@ -16,7 +16,7 @@ class Music extends Component {
     };
 
     componentDidMount() {
-        Axios.get('http://localhost:4000/artists/musician')
+        Axios.get('http://localhost:4000/artists/occupation/musician')
             .then(res => {
                 this.setState({ artists: res.data })
                 console.log(this.state.artists)

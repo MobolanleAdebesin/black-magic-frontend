@@ -16,7 +16,7 @@ class Beauty extends Component {
     };
 
     componentDidMount() {
-        Axios.get('http://localhost:4000/artists/beauty')
+        Axios.get('http://localhost:4000/artists/occupation/beauty')
             .then(res => {
                 this.setState({ artists: res.data })
                 console.log(this.state.artists)
