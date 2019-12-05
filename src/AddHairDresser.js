@@ -81,7 +81,7 @@ onChangeimage(evt) {
                     <input type="text" value={this.state.name} placeholder="Name" onChange={this.onChangeName}/>
                     </div>
                     <div>
-                    <input type="text" value={this.state.occupation} placeholder="occupation" onChange={this.onChangeoccupation} />
+                    <input type="text" value={this.state.occupation} placeholder="Enter beauty/musician/artist" onChange={this.onChangeoccupation} />
                     </div>
                     <div>
                     <input type="text" value={this.state.location} placeholder="location" onChange={this.onChangelocation} />
