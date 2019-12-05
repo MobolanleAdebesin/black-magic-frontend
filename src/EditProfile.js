@@ -144,7 +144,7 @@ class EditProfile extends Component {
                                     </div>
                                 </div>
                             
-                        )})};
+                        )})}
                 </form>
             </div>
 
